@@ -63,7 +63,7 @@ app.get("/", function(req, res) {
       else {
         res.render("list", {
           name: "Today",
-          newListItems: results
+          newListItems: results,
         });
       }
     }
@@ -140,10 +140,13 @@ app.post("/delete", function(req, res){
       }
     });
   }
-
-
 });
 
+app.post("/create", function(req, res){
+  const pageName = req.body.pageName;
+
+  res.redirect("/" + pageName);
+});
 
 app.listen(3000, function() {
   console.log("Server started on port 3000");

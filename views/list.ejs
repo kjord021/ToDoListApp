@@ -20,4 +20,17 @@
   </form>
 </div>
 
+<div class="box" id="heading">
+  <h1> Create A List </h1>
+</div>
+
+<div class="box">
+  <form class="item" action="/create" method="post">
+    <input type="text" name="pageName" placeholder="New List Name" autocomplete="off">
+    <button type="submit" name="list" value="<%= name %>">+</button>
+  </form>
+</div>
+
+
+
 <%- include("footer") -%>
